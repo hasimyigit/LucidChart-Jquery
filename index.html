@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LucidChart</title>
+
+  <link type="text/css" rel=stylesheet href="style.css"/>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="script.js">
+      </script>
+            
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel = "stylesheet">
+   <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+ 
+
+
+</head>
+<body>
+        <div class="row" >
+                <div class="col-md-5" id="navbardiv">
+                  <div class="navdiv">
+                   
+                    <nav class="navbar navbar-expand-lg  ">
+                      <a class="navbar-brand" href="#">Sample App</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="btn-group" id="usersdrop">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             User Name
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" id="users">
+                            
+                           
+                            </div>
+                          </div>
+                    </nav>
+                  
+            
+                  </div>
+                 
+                  </div>
+                  
+                </div>
+                <div class="row">
+                        <div class="col-md-3" id="userdetail">
+                                <ul class="list-group" id="user" >
+                                  <li class="list-group-item disabled" aria-disabled="true">User Detail</li>
+                                  <li class="list-group-item" id="user">Username: </li>
+                                  <li class="list-group-item" id="user">Email:</li>
+                                  <li class="list-group-item">Adress: </li>
+                                 
+                                </ul>
+                              </div>
+                              <div class="col-md-3" id="albumdiv">
+                                    <div class="btn-group" id="albumdrop">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                             Album Title
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" id="albums">
+                                            
+                                           
+                                            </div>
+                                          </div>
+                                          <div class="photosDiv"> 
+
+                                         
+                                          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 150px; height: 100px;">
+                                                <ol class="carousel-indicators">
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                                </ol>
+                                                <div class="carousel-inner" id="photos">
+                                                
+                                                  
+                                                </div>
+                                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                  <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                  <span class="sr-only">Next</span>
+                                                </a>
+                                              </div>
+                                            </div>
+
+                              </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" id="postsdiv">
+                            <table class="table" >
+                                    <thead class="thead-dark">
+                                      <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Detail</th>
+                                     
+                                      </tr>
+                                    </thead>
+                                    <tbody id="posts">
+                                  
+                                
+                                    </tbody>
+                                  </table>
+                    </div>
+                    <div class="col-md-5" id="todosdiv">
+                            <table class="table" >
+                                    <thead class="thead-dark">
+                                      <tr>
+                                        <th scope="col">Completed</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Details</th>
+                                     
+                                      </tr>
+                                    </thead>
+                                    <tbody id="todos">
+                                  
+                                
+                                    </tbody>
+                                  </table>
+                    </div>
+                </div>
+       
+        <div id="dialog" title="Post Detail Modal" class="dialogdetails"  style="display: none;">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Post Title</h6>
+                        <p id="commentstitle" ></p>
+                    </div>
+                    <div class="col-md-6">
+                            <h6>Post Comments</h6>
+                       <div id="comments">
+
+                       </div>
+                     
+                    </div>
+                </div>
+                
+              </div>
+              <div id="dialogdelete" title="Delete Modal"   style="display: none;">
+                
+                    <div class="row">
+                        <div class="col-md-6" style="margin-left: 120px;">
+                                <p> Are you  sure to remove this task ?</p>
+                            <button lstyle="float: left; width:50px; height:50px; " >Yes</button>
+                            <button style="width:40px; height:32px; margin-left:15px;">No</button>
+                           
+                        </div>
+                       
+    
+                           </div>
+                         
+                        </div>
+                        <div id="dialogedit" title="Edit Modal"   style="display: none;">
+                
+                                <div class="row">
+                                        <div class="col-md-10" style="margin-top:5px; margin-left: 50px;" id="todoedit">
+                                         
+                                         
+                                        </div>
+                                        </div>
+                                        <div class="row" >
+                                          <div class="col-md-10" style="margin-left: 50px; float: left; margin-top: 25px;">
+                                      <button style="width:75px; height:50px; margin-left: 25px; " >Save</button>
+                                            <button style="height:50px; width:75px; margin-left: 25px;">Cancel</button>
+                                          </div>
+                                        </div>
+                                       
+                                     
+                                    </div>
+                                    <div id="dialogcon" title="Confrim Modal"   style="display: none;">
+                
+                                           
+                                            
+                                            <div class="row">
+                                                <div class="col-md-10" style="margin-top: 25px; margin-left: auto; margin-right: auto; text-align: center">
+                                                    <p> Are you  sure to complete this task ?</p>
+                                                 
+                                                </div>
+                                                <div class="col-md-6" style="margin-left: 100px;">
+                                                  <button  style="float: left; width:50px; height:50px; " >Yes</button>
+                                                  <button style="width:50px; height:50px; margin-left:15px;">NO</button>
+                                                </div>
+                                            </div>
+                                                   
+                                                 
+                                                </div>
+                    </div>
+                    
+                  </div>
+    
+</body>
+</html>

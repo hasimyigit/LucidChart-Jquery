@@ -1,0 +1,64 @@
+#maincss{
+
+    margin-left: 400px;
+
+}
+.navdiv{
+    background-color: gray;
+   
+}
+#navbardiv{
+    margin-left: auto;
+    margin-right: auto;
+}
+#usersdrop{
+   margin-left: 400px;
+}
+#userdetail{
+    margin-top: 20px;
+    margin-left: 300px;
+}
+.detailicon{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+#postsdiv{
+    margin-left: 300px;
+    margin-top: 50px;
+}
+#albumdiv{
+    margin-top:20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+#albumdrop{
+    margin-top: 50px;
+    margin-left: 20px;
+    float: left;
+}
+.photosDiv{
+    margin-left: 200px;
+}
+#todosdiv{
+    margin-top: 50px;
+    
+}
+.dialogPost{
+    width: 350px;
+    height: 300px;
+    overflow-y: auto;
+}
+.dialogdetails{
+    width: 350px;
+    height: 300px;
+    overflow-y: auto;
+  
+  
+}
+#dialog{
+    width: 350px;
+    height: 300px;
+    overflow-y: auto;
+}
